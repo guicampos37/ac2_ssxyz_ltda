@@ -14,4 +14,5 @@ public class DadosCursoDTO {
     private String nome;
     private Integer cargaHoraria;
     private CategoriaCursoDTO categoria;
+    private java.util.List<ProfessorDTO> professores;
 }

@@ -1,6 +1,8 @@
 package com.example.ssxyz_ltda.models;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -21,6 +23,9 @@ public class Professor {
 
     @ManyToMany(mappedBy = "professoresHabilitados")
     private Set<Curso> cursosHabilitados;
+
+    @OneToMany(mappedBy = "professor", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Planilha> planilhas;
 
     public Long getId() {
         return id;

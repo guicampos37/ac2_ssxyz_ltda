@@ -5,14 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-public class CursoDTO {
+public class ProfessorDTO {
     private Long id;
     private String nome;
-    private int cargaHoraria;
-    private Integer categoriaCursoId;
-    private java.util.List<Long> professorIds;
+    private String cpf;
+    private String rg;
+    private String endereco;
+    private String celular;
 }
